@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class Task1 {
 
-    @Test
+    @Test(groups = "sprint1")
     public void firstMethod(){
         System.out.println("this is first method");
     }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/azizu/IdeaProjects/TestNgBatch1/src/class1/LoginTest.java">
+        <classes>
+            <class name="class1.Task1">
+                <methods>
+                    <include name="firstMethod"/>
+                    <exclude name="secondMethod"/>
+                    <include name="thirdMethod"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
