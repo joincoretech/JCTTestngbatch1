@@ -15,11 +15,6 @@ import utils.ConfigReader;
 import java.time.Duration;
 
 public class ParallelTest extends CommonMethods {
-    @BeforeMethod(alwaysRun = true)
-    @Override
-    public void setUp() {
-        super.setUp();
-    }
 
     //  public WebDriver driver;
 
@@ -66,10 +61,6 @@ public class ParallelTest extends CommonMethods {
         System.out.println("login test is passes the home page welcome text display " + welcomeName.getText());
     }
 
-    @AfterMethod(alwaysRun = true)
-    @Override
-    public void closBrowser() {
-        super.closBrowser();
-    }
+
 }
 

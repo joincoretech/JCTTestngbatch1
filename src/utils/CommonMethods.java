@@ -1,6 +1,8 @@
 package utils;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
@@ -9,14 +11,14 @@ import org.testng.annotations.BeforeMethod;
 import java.time.Duration;
 
 public class CommonMethods {
-    public static WebDriver driver;
+    public  WebDriver driver;
    @BeforeMethod (alwaysRun = true)
     public  void setUp(){
         ConfigReader.readProperties("src/class4/config/Config.properties");
         switch (ConfigReader.getPropertiesValue("browser")){
 
             case "chrome":
-                System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "drivers/chromedriver2.exe");
                 driver=new ChromeDriver();
                 break;
             case "Firefox":
@@ -29,9 +31,10 @@ public class CommonMethods {
         driver.get(ConfigReader.getPropertiesValue("url"));
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
     }
 
-    @AfterMethod(alwaysRun = true)
+
     public void closBrowser(){
        driver.quit();
     }
